@@ -3,7 +3,8 @@ class LinkedList
 
   def initialize
     @head = nil
-    @count = 0 
+    @count = 0
+
   end
 
   def head
@@ -18,6 +19,10 @@ class LinkedList
 
   def count
     @count
+  end
+
+  def to_string
+    "The #{@head.surname} family"
   end
 
 end

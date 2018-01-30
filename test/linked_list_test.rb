@@ -36,6 +36,14 @@ class LinkedListTest < Minitest::Test
     list = LinkedList.new
     list.append("West")
 
-    assert_equal 1, list.count 
+    assert_equal 1, list.count
   end
+
+  def test_the_string_is_west_family
+    list = LinkedList.new
+    list.append("West")
+
+    assert_equal "The West family", list.to_string
+  end
+
 end
