@@ -19,7 +19,7 @@ class NodeTest < Minitest::Test
   def test_next_node_is_nil
     node = Node.new("Burke")
 
-    assert_equal nil, node.next_node 
+    assert_equal nil, node.next_node
   end
 
 end
