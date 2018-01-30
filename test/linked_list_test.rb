@@ -29,6 +29,13 @@ class LinkedListTest < Minitest::Test
     list = LinkedList.new
     list.append("West")
 
-    assert_nil list.head.next_node 
+    assert_nil list.head.next_node
+  end
+
+  def test_list_count
+    list = LinkedList.new
+    list.append("West")
+
+    assert_equal 1, list.count 
   end
 end
