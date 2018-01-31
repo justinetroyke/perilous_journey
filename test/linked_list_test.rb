@@ -45,5 +45,4 @@ class LinkedListTest < Minitest::Test
 
     assert_equal "The West family", list.to_string
   end
-
 end
