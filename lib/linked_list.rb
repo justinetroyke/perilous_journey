@@ -29,7 +29,16 @@ class LinkedList
   end
 
   def to_string
-    "The #{@head.surname} family"
+    string = "The #{@head.surname} family"
+    current_node = @head.next_node
+    until current_node.nil?
+      string += ", followed by the #{current_node.surname} family"
+      if current_node.next_node.nil?
+        string += "."
+      end
+      current_node = current_node.next_node
+    end
+    string
   end
 
 end

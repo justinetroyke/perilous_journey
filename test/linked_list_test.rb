@@ -66,10 +66,10 @@ class LinkedListTest < Minitest::Test
 
   def test_that_the_string_of_family_follows
     list = LinkedList.new
-    list.append("West")
+    list.append("Rhodes")
     list.append("Hardy")
 
-    assert_equal "The Rhodes family, followed by the Hardy family", list.to_string
+    assert_equal "The Rhodes family, followed by the Hardy family.", list.to_string
   end
 
 end
