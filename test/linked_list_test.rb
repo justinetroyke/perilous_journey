@@ -69,7 +69,7 @@ class LinkedListTest < Minitest::Test
     list.append("Rhodes")
     list.append("Hardy")
 
-    assert_equal "The Rhodes family, followed by the Hardy family.", list.to_string
+    assert_equal "The Rhodes family, followed by the Hardy family", list.to_string
   end
 
   def test_that_a_node_can_be_added_to_head
