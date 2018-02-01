@@ -41,4 +41,8 @@ class LinkedList
     string
   end
 
+  def prepend(surname)
+    @head = Node.new(surname)
+  end
+
 end

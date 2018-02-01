@@ -72,4 +72,14 @@ class LinkedListTest < Minitest::Test
     assert_equal "The Rhodes family, followed by the Hardy family.", list.to_string
   end
 
+  def test_that_a_node_can_be_added_to_head
+    list = LinkedList.new
+    list.append("Brooks")
+    list.append("Henderson")
+    list.prepend("McKinney")
+
+    assert_instance_of Node, list.head
+    assert_equal "McKinney", list.head.surname
+  end
+
 end
