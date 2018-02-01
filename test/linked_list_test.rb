@@ -36,6 +36,7 @@ class LinkedListTest < Minitest::Test
     list = LinkedList.new
     list.append("West")
 
+
     assert_equal 1, list.count
   end
 
@@ -54,4 +55,21 @@ class LinkedListTest < Minitest::Test
     assert_instance_of Node, list.head
     assert_equal "Hardy", list.head.next_node.surname
   end
+
+  def test_that_the_count_updates_with_next_node
+    list = LinkedList.new
+    list.append("West")
+    list.append("Hardy")
+
+    assert_equal 2, list.count
+  end
+
+  def test_that_the_string_of_family_follows
+    list = LinkedList.new
+    list.append("West")
+    list.append("Hardy")
+
+    assert_equal "The Rhodes family, followed by the Hardy family", list.to_string
+  end
+
 end
