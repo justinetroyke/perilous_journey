@@ -12,8 +12,15 @@ class LinkedList
   end
 
   def append(surname)
-    new_node = Node.new(surname)
-    @head = new_node
+    if @head.nil?
+      @head = Node.new(surname)
+    else
+      current_node = @head
+      until current_node.next_node.nil?
+        current_node = current_node.next_node
+      end
+      current_node.next_node = Node.new(surname)
+    end
     @count += 1
   end
 

@@ -39,10 +39,19 @@ class LinkedListTest < Minitest::Test
     assert_equal 1, list.count
   end
 
-  def test_the_string_is_west_family
+  def test_append_works_on_each_new_node
     list = LinkedList.new
     list.append("West")
 
     assert_equal "The West family", list.to_string
+  end
+
+  def test_the_surname_is_passed_to_next_node
+    list = LinkedList.new
+    list.append("West")
+    list.append("Hardy")
+
+    assert_instance_of Node, list.head
+    assert_equal "Hardy", list.head.next_node.surname
   end
 end
